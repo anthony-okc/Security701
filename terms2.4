@@ -1,0 +1,459 @@
+malware
+malicious software
+types of malware and methods
+viruses
+worms
+ransomware
+trojan horse
+rootkit
+keylogger
+spyware
+bloatware
+logic bomb
+how you get malware
+diff types all work together
+- A worm takes advantage of a vulnerability
+- Installs malware that includes a remote access backdoor
+- Bot may be installed later
+
+Your computer must run a program
+- Email link
+- Web page pop-up
+- Drive-by download
+- Worm
+
+Your computer is vulnerable
+- Operating system = Keep updated!
+- Applications - Check with the publisher
+ransomware
+Software that encrypts programs and data until a ransom is paid to remove it.
+- OS works = they want you running not working
+protecting vs ransomware
+always have backup
+keep OS/apps updated
+keep antivirus/antimalware signatures up to date
+virus
+malware that can reproduce itself
+- needs you to execute
+
+reproduces through file systems or network
+
+may or may not cause problems
+
+anti-virus very common
+virus types
+program viruses (part of app)
+
+boot sector viruses
+- virus runs as system boots up
+
+script viruses
+- OS and many other software run scripts = malicious scripts
+
+macro viruses
+- common in Microsoft office
+
+fileless virus
+fileless virus
+very stealthy = does a good job avoiding antivirus
+
+operates in memory
+- never installed in file or app
+worms
+malware that self replicates
+- doesnt need you to do anything
+- uses the network to spread
+
+can spread really quick
+
+firewalls and IDS/IPS can mitigate worm infestations
+- not helpful once worm is inside
+spyware
+malware that spies on you
+- ID theft, affiliate fraud, ads
+
+browser monitoring
+keyloggers
+
+can trick you into installing
+protecting against spyware
+maintain antivirus/antimalware
+
+always know what you're installing
+
+backups
+
+run scans w/ 3rd party software
+bloatware
+unwanted and potentially harmful software preloaded onto new devices.
+- can open your system to exploits
+- takes up storage/resources
+- system may be slower than expected
+removing bloatware
+identify and remove manually
+- easier said than done
+
+use built in uninstaller on system
+using the app's own uninstallers
+3rd party uninstallers
+always have backup
+keyloggers
+malware that tracks your keyboard inputs
+- sent to bad guys
+- circumvents encryption protections
+
+other data logging
+- screen logging
+- instant messaging
+- clipboard logging
+etc
+logic bomb
+waits for a predefined event
+
+time bomb
+- triggered by time or date
+
+user event
+- triggered by user action
+
+difficult to identify
+preventing a logic bomb
+hard to recognize
+- each is unique
+
+process and procedures
+- change control
+
+electronic monitoring
+- alert on changes
+
+constant auditing
+rootkits
+originally a unix technique
+
+malware that modifies core system files
+- part of kernel
+
+can be invisible to the OS
+
+also invis to traditional antivirus utilities
+finding and removin rootkits
+look for the unusual
+- antimalware scans
+
+use a remover specific to the rootkit
+-usually made after its discovered
+
+secure boot with UEFI
+- security in the BIOS
+- checks to OS signature and confirm nothing has changed before booting
+physical attacks
+the old fashioned way
+
+types:
+brute force
+brute force
+push through obstruction for access
+
+check your doors, windows, locks, etc
+RFID cloning
+duplicating RFID on access badges, key fobs, etc
+
+takes seconds
+- read one card
+- copy to another
+
+why we have MFA
+environmental attack
+attack stuff supporting the technology
+- HVAC
+- power
+- fire suppression system
+DNS poisoning
+diff ways:
+
+modify the DNS server itself
+- requires crafty hacking
+
+modify the client host file
+- the host file takes precedent over DNS queries
+- host file has lists of domain names and IP addresses
+
+send fake responses to valid DNS requests
+- requires redirection of the original request or the response
+- real time redirection
+- on path attack
+DNS spoofing/poisoning
+When an IP address is maliciously changed in a DNS server so that traffic is redirected to a fake website
+domain hijacking
+get access to the domain registration and you have control where the traffic flows
+- dont need to touch the actual servers
+- determines the DNS names and DNS IP addresses
+
+many ways to get into the account:
+- brute force
+- social engineer the password
+- gain access to the email address that manages the acc
+URL hijacking
+can:
+
+redirecting users to malicious sites with ads = $$ for attacker
+
+sell the badly spelled domain to the actual owner
+- sell a mistake
+
+redirect traffic to a competitor
+- not as common, legal issues
+
+present a phishing site
+- steal login info
+
+infect with a drive by download
+- malware!
+types of URL hijacking
+typosquatting/brandjacking
+- take adv of poor spelling
+
+outright misspelling
+- professormesser.com vs professormessor.com
+
+a typing error
+- professormeser.com
+
+a different phrase
+- professormessers.com
+
+diff top level domain
+- professormesser.org
+(instead of .com)
+wireless deauthentication
+a significant wireless DoS attack
+- suddenly disconnects people off of wifi
+802.11 management frames
+802.11 wireless includes frames that make everything work
+• You never see them
+
+Important for the operation of 802.11 wireless
+• How to find access points, manage QoS, associate/disassociate with an access point, etc.
+
+Original wireless standards did not add protection for management frames
+• Sent in the clear
+• No authentication or validation
+protecting against deauth attacks
+updates with 802.11ac
+
+important management frames are now encrypted
+- disassociate, deauth, etc
+
+not everything tho
+- beacons, probes, auth, association
+radio frequency (RF) jamming
+DoS
+
+transmit interfering wireless signals
+- decrease signal to noise ratio at receiving device
+- receiving device cant hear good signal
+
+jamming is intentional
+types of wireless jamming
+constant - constantly blocking
+
+random- data sent at random times
+
+legit - microwave/traffic
+
+reactive - only when someone tries to communicate
+
+needs to be somewhere close
+- fox hunting
+- directional antenna, attenuator needed
+on path network attack
+aka man-in-the-middle
+
+redirects your traffic and passes it on to the destination
+- you never know
+
+ex: ARP poisoning
+ARP poisoning
+An attack that corrupts the ARP cache (table of MAC and IP addresses)
+- attacker poisons the cache for the victim and router
+- so they can sit in the middle
+- on local IP subnet; attacker has to be on it
+on path browser attack
+malware/trojan does the proxy work and is able to redirect traffic before and after it is sent to the network
+
+aka man-in-the-browser
+
+huge advantage
+- even if network traffic was encrypted, attacker still sees it
+- everything looks normal to victim
+replay attack
+A type of network attack where an attacker captures network traffic and stores it for retransmission at a later time to gain unauthorized access to a network
+
+need access to raw network data
+
+avoided using encryption or salting of the password
+browser cookies
+information stored on your computer by the browser
+- used for tracking, personalization, session management
+
+not executable, not security risk usually
+- unless someone gets access to them
+- privacy risk
+session hijacking (sidejacking)
+attackers using session IDs given to users by servers for unauthorized access
+- server thinks the attacker is the victim
+
+prevention
+- encryption (HTTPS, VPNs, etc)
+Header Manipulation
+An attack that modifies HTTP headers so they contain malicious information, such as harmful commands and scripts.
+malicious code
+diff forms:
+
+executable, scripts, macro viruses, worms, trojan horse, etc
+
+protection has to come from many diff places
+- firewalls, anti-malware, updates, etc
+injection attacks
+code injection
+- adding your own info into a data stream
+
+enabled from bad programming
+- shouldnt be allowed
+
+many diff injectable data types
+HTML
+SQL
+XML
+LDAP
+etc
+types of application attacks
+buffer overflows
+code injection
+replay attack
+privilege escalation
+cross-site requests
+privilege escalation
+gain higher level access to a system
+
+high priority to patch
+
+mitigating:
+patching
+updating antivirus/anti-malware
+data execution prevention
+- only data in executable areas can run
+website code
+client and server side code
+
+client side
+- renders pages on screen
+- HTML, JavaScript
+
+server side
+- performs requests from client
+- HTML, PHP
+cross-site request forgery
+1 click attack, session riding
+- XSRF, CSRF (sea surf)
+
+takes adv of the trust that a web app has for the user
+- website trusts your browser
+- requests are made without your consent or knowledge
+directory traversal/path traversal
+-Read/write files from a web server that are outside of the website's file directory
+-Users shouldn't be able to browse the Windows folder
+
+sometimes its software vulnerability
+
+sometimes its web app code vulnerability
+cryptographic attacks
+attackers attack the cryptography itself instead of trying to get the encrypted data
+- break the "safe" since they dont have the key
+
+find ways to undo the security
+- the problem is often the implementation
+birthday attack (cryptographic attacks)
+finding a hash collision using brute force
+
+- protect yourself with large has output sizes
+hash collision
+Occurs when the hashing algorithm creates the same hash from different texts
+downgrade attack (cryptographic attacks)
+A type of attack that forces a system to downgrade its security/encryption. The attacker then exploits the lesser security control.
+
+ex: SSL stripping
+SSL stripping (cryptographic attacks)
+combines an on path attack with a downgrade attack
+- hard to implement but big reward if possible
+- attacker must sit in the middle of the convo
+- strips the encryption between the victim and web server
+spraying attack (password attacks)
+attack an account by trying to login with the top 3 or 4 most common passwords
+- if it doesnt work move on
+brute force attack (password attacks)
+try every password combination until hash is matched
+- can take time
+- usually done offline
+
+strong hashing algo slows things down
+indicators of compromise (IOC)
+an event that indicates intrusion
+- high confidence
+
+indicators
+- unusual amount of network activity
+- change to file hash values
+- irregular international traffic
+- change to DNS data
+etc
+account lockout (IOC)
+exceeded login attempts
+- wasnt you
+
+could be administratively disabled
+- larger concern
+
+may be part of a larger plan
+- attacker locks acc, calls help desk impersonating you to reset password
+concurrent session usage (IOC)
+multiple acc logins from multiple locations
+- can be hard to track down
+blocked content (IOC)
+attacker wants to stay as long as possible
+- blocks security patches, updates, removal tools, etc
+impossible travel (IOC)
+impossible travel in authentication logs can be a sign of intrusion
+resource consumption (IOC)
+if resource consumption spikes at unusual times or is higher than usual
+
+firewall logs show the outgoing transfer
+- IP addresses, timeframes
+
+often first real notification of issue
+resource inaccessibility (IOC)
+server being down
+- not responding
+
+network disruption
+- cover for the actual exploit
+
+server outage
+- result of an exploit gone wrong
+
+encrypted data
+out of cycle logging (IOC)
+logs that occur at an unexpected time
+
+check firewall log activity
+missing logs (IOC)
+log info is evidence
+- attackers delete logs to cover tracks
+
+logs may be incriminating
+- missing logs are suspicious
+- logs should be secured and monitored
+published/documented info (IOC)
+company data may be published online
+- can be combined with ransomware
