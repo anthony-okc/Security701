@@ -1,4 +1,18 @@
-malware 
+In unit 2.4 There are 7 sections
+- Malware Attacks
+- Physical Attacks
+- Network Attacks
+- Appplication Attacks
+- Cryptographic Attacks 
+- Password Attacks 
+- Indicators 
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Malware Attacks terms
+
+(1.Malware (2.ransomeware (3.Virus (4.Worm (5.Spyware (6.Bloatware (7.Keylogger (8.Logic Bomb (9.Rootkit (10.Trojan
+
+(1. Malware 
 - malicious software
 types of malware and methods 
 - viruses, worms, ransomware, trojan horse, rootkit, keylogger, spyware, bloatware, logic bomb
@@ -9,95 +23,67 @@ how you might get malware
 - Email link
 - Web page pop-up
 - Drive-by download
-- Worm
-ransomware
+
+(2. Ransomware
 - Software that encrypts programs and data until a ransom is paid to remove it.
 protecting vs ransomware
 - always have backup, keep OS/apps updated, keep antivirus/antimalware signatures up to date
-virus
+
+(3. Virus
 - malware that can reproduce itself
 - needs you to execute
 -reproduces through file systems or network
-
-may or may not cause problems
-
-anti-virus very common
+- may or may not cause problems
+- anti-virus very common
 virus types
-program viruses (part of app)
+- program viruses (part of app)
+- Boot sector Viruses run as the system boots up
+- Script viruses OS and many other software run scripts = malicious scripts
+- mirco viruses (common in Microsoft office)
+- fileless virus (a stealthy virus that opeates through memory
 
-boot sector viruses
-- virus runs as system boots up
-
-script viruses
-- OS and many other software run scripts = malicious scripts
-
-macro viruses
-- common in Microsoft office
-
-fileless virus
-fileless virus
-very stealthy = does a good job avoiding antivirus
-
-operates in memory
-- never installed in file or app
-worms
-malware that self replicates
+(4. Worm
+- malware that self replicates
 - doesnt need you to do anything
 - uses the network to spread
+- can spread really quick
+- firewalls and IDS/IPS can mitigate worm infestations (although it is not helpful once worm is inside)
 
-can spread really quick
-
-firewalls and IDS/IPS can mitigate worm infestations
-- not helpful once worm is inside
-spyware
-malware that spies on you
+(5. Spyware
 - ID theft, affiliate fraud, ads
-
-browser monitoring
-keyloggers
-
-can trick you into installing
+- browser monitoring
+- keyloggers
+- usually in an attempt to trick you into installing something malicious
 protecting against spyware
-maintain antivirus/antimalware
+- maintain antivirus/antimalware
+- always know what you're installing
+- consistent backups
+- run scans w/ 3rd party software
 
-always know what you're installing
-
-backups
-
-run scans w/ 3rd party software
-bloatware
-unwanted and potentially harmful software preloaded onto new devices.
+(6. Bloatware
+- unwanted and potentially harmful software preloaded onto new devices.
 - can open your system to exploits
 - takes up storage/resources
 - system may be slower than expected
 removing bloatware
-identify and remove manually
-- easier said than done
+- identify and remove manually (easier said than done)
+- use built in uninstaller on system using the app's own uninstallers
+- 3rd party uninstallers
+- always have backups
 
-use built in uninstaller on system
-using the app's own uninstallers
-3rd party uninstallers
-always have backup
-keyloggers
-malware that tracks your keyboard inputs
-- sent to bad guys
+(7. Keylogger
+- malware that tracks your keyboard inputs then sends the data to people with malicious intent
 - circumvents encryption protections
-
-other data logging
+types of keylogging
 - screen logging
 - instant messaging
 - clipboard logging
-etc
-logic bomb
-waits for a predefined event
 
-time bomb
-- triggered by time or date
-
-user event
-- triggered by user action
-
-difficult to identify
+(8. Logic Bomb
+- waits for a predefined event
+- time bomb (triggered by time or date)
+- user event (triggered by user action)
+- logic bombs are usually difficult to identify
 preventing a logic bomb
 hard to recognize
 - each is unique
@@ -109,9 +95,9 @@ electronic monitoring
 - alert on changes
 
 constant auditing
-rootkits
-originally a unix technique
 
+(9. Rootkit
+originally a unix technique
 malware that modifies core system files
 - part of kernel
 
@@ -128,11 +114,13 @@ use a remover specific to the rootkit
 secure boot with UEFI
 - security in the BIOS
 - checks to OS signature and confirm nothing has changed before booting
-physical attacks
-the old fashioned way
+(10. Trojan 
+- a type of malware that disguises itself as a legitimate program to gain access to a user's device
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Physical Attacks terms
 
-types:
-brute force
+physical attacks
+- a brute force physical attack
 brute force
 push through obstruction for access
 
