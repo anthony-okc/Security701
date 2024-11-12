@@ -1,3 +1,4 @@
+# Security701 Unit 2.4
 In unit 2.4 There are 7 sections
 - Malware Attacks
 - Physical Attacks
@@ -8,8 +9,10 @@ In unit 2.4 There are 7 sections
 - Indicators 
 
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-Malware Attacks terms
 
+Malware Attacks
+
+Malware Attacks terms
 (1.Malware (2.ransomeware (3.Virus (4.Worm (5.Spyware (6.Bloatware (7.Keylogger (8.Logic Bomb (9.Rootkit (10.Trojan
 
 (1. Malware 
@@ -32,7 +35,7 @@ protecting vs ransomware
 (3. Virus
 - malware that can reproduce itself
 - needs you to execute
--reproduces through file systems or network
+- reproduces through file systems or network
 - may or may not cause problems
 - anti-virus very common
 virus types
@@ -84,345 +87,189 @@ types of keylogging
 - time bomb (triggered by time or date)
 - user event (triggered by user action)
 - logic bombs are usually difficult to identify
-preventing a logic bomb
-hard to recognize
-- each is unique
-
-process and procedures
-- change control
-
-electronic monitoring
-- alert on changes
-
-constant auditing
 
 (9. Rootkit
-originally a unix technique
-malware that modifies core system files
+- originally a unix technique
+- malware that modifies core system files
 - part of kernel
-
-can be invisible to the OS
-
-also invis to traditional antivirus utilities
+- can be invisible to the OS
+- is invisible to traditional antivirus utilities
 finding and removin rootkits
-look for the unusual
 - antimalware scans
-
-use a remover specific to the rootkit
--usually made after its discovered
-
-secure boot with UEFI
+-  use a remover specific to the rootkit
+- usually made after its discovered
+- secure boot with UEFI
 - security in the BIOS
 - checks to OS signature and confirm nothing has changed before booting
+
 (10. Trojan 
 - a type of malware that disguises itself as a legitimate program to gain access to a user's device
+
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Physical Attacks
+
 Physical Attacks terms
+(1.Brute Force (2.RFID Cloning (3. Environmental 
 
-physical attacks
+(1. Brute Force
 - a brute force physical attack
-brute force
-push through obstruction for access
 
-check your doors, windows, locks, etc
-RFID cloning
-duplicating RFID on access badges, key fobs, etc
+(2. RFID cloning
+- duplicating RFID on access badges, key fobs, etc
+- takes seconds
+- read one card then copying its data to another
 
-takes seconds
-- read one card
-- copy to another
-
-why we have MFA
-environmental attack
+(3. environmental attack
 attack stuff supporting the technology
 - HVAC
 - power
 - fire suppression system
-DNS poisoning
-diff ways:
 
-modify the DNS server itself
-- requires crafty hacking
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-modify the client host file
-- the host file takes precedent over DNS queries
-- host file has lists of domain names and IP addresses
+Network Attacks
 
-send fake responses to valid DNS requests
-- requires redirection of the original request or the response
-- real time redirection
-- on path attack
-DNS spoofing/poisoning
-When an IP address is maliciously changed in a DNS server so that traffic is redirected to a fake website
-domain hijacking
-get access to the domain registration and you have control where the traffic flows
-- dont need to touch the actual servers
-- determines the DNS names and DNS IP addresses
+Network Attacks Terms
+(1.Distributed denial of service (2.Amplified (3.Reflected (4.Domain Name System (5.Wireless (6.On-Path (7.Credential replay (8.Malicious code
 
-many ways to get into the account:
-- brute force
-- social engineer the password
-- gain access to the email address that manages the acc
-URL hijacking
-can:
+(1.Distributed Denial of Service (DDoS)
+- a malicious attempt to disrupt the normal traffic of a targeted server, service or network by overwhelming the target or its surrounding infrastructure with a flood of Internet traffic.
 
-redirecting users to malicious sites with ads = $$ for attacker
+(2. Amplified (DDos Attack)
+- a type of cyberattack in which the attacker sends out a large request, such as to a DNS server or ICMP ping, and receives an extremely large response back.
 
-sell the badly spelled domain to the actual owner
-- sell a mistake
+(3. Reflected (XXS Attack)
+-  involves a vulnerable website accepting data (i.e. malicious script) sent by the target's own web browser to attack the target with
 
-redirect traffic to a competitor
-- not as common, legal issues
+(4. Domain Name System (DNS)
+- a fundamental part of the internet that translates human-readable domain names into numerical IP addresses
 
-present a phishing site
-- steal login info
+(5. Wireless Deauthentication
+- a significant wireless DoS attack that suddenly disconnects people off of wifi
 
-infect with a drive by download
-- malware!
-types of URL hijacking
-typosquatting/brandjacking
-- take adv of poor spelling
-
-outright misspelling
-- professormesser.com vs professormessor.com
-
-a typing error
-- professormeser.com
-
-a different phrase
-- professormessers.com
-
-diff top level domain
-- professormesser.org
-(instead of .com)
-wireless deauthentication
-a significant wireless DoS attack
-- suddenly disconnects people off of wifi
-802.11 management frames
-802.11 wireless includes frames that make everything work
-• You never see them
-
-Important for the operation of 802.11 wireless
-• How to find access points, manage QoS, associate/disassociate with an access point, etc.
-
-Original wireless standards did not add protection for management frames
-• Sent in the clear
-• No authentication or validation
-protecting against deauth attacks
-updates with 802.11ac
-
-important management frames are now encrypted
-- disassociate, deauth, etc
-
-not everything tho
-- beacons, probes, auth, association
-radio frequency (RF) jamming
-DoS
-
-transmit interfering wireless signals
-- decrease signal to noise ratio at receiving device
-- receiving device cant hear good signal
-
-jamming is intentional
-types of wireless jamming
-constant - constantly blocking
-
-random- data sent at random times
-
-legit - microwave/traffic
-
-reactive - only when someone tries to communicate
-
-needs to be somewhere close
-- fox hunting
-- directional antenna, attenuator needed
-on path network attack
-aka man-in-the-middle
-
-redirects your traffic and passes it on to the destination
-- you never know
-
-ex: ARP poisoning
-ARP poisoning
-An attack that corrupts the ARP cache (table of MAC and IP addresses)
-- attacker poisons the cache for the victim and router
-- so they can sit in the middle
-- on local IP subnet; attacker has to be on it
-on path browser attack
-malware/trojan does the proxy work and is able to redirect traffic before and after it is sent to the network
-
-aka man-in-the-browser
-
-huge advantage
+(6. On Path Network Attack and Browser Attack
+Network Attack
+- redirects your traffic and passes it on to the destination
+Browser Attack
+- malware/trojan does the proxy work and is able to redirect traffic before and after it is sent to the network
+- aka man-in-the-browser
+- huge advantage
 - even if network traffic was encrypted, attacker still sees it
 - everything looks normal to victim
-replay attack
-A type of network attack where an attacker captures network traffic and stores it for retransmission at a later time to gain unauthorized access to a network
 
-need access to raw network data
+(7. Credential Replay Attack
+- A type of network attack where an attacker captures network traffic and stores it for retransmission at a later time to gain unauthorized access to a network
+- need access to raw network data
+- avoided using encryption or salting of the password
 
-avoided using encryption or salting of the password
-browser cookies
-information stored on your computer by the browser
-- used for tracking, personalization, session management
+(8. Malicious Code
+different types
+-executable, scripts, macro viruses, worms, trojan horse, etc
 
-not executable, not security risk usually
-- unless someone gets access to them
-- privacy risk
-session hijacking (sidejacking)
-attackers using session IDs given to users by servers for unauthorized access
-- server thinks the attacker is the victim
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-prevention
-- encryption (HTTPS, VPNs, etc)
-Header Manipulation
-An attack that modifies HTTP headers so they contain malicious information, such as harmful commands and scripts.
-malicious code
-diff forms:
+Application Attacks
 
-executable, scripts, macro viruses, worms, trojan horse, etc
+Application Attacks Terms 
+(1.Injection (2.Bufffer Overflow (3.Replay (4.Privilege escalation (5.Forgery (6.Directory Travel 
 
-protection has to come from many diff places
-- firewalls, anti-malware, updates, etc
-injection attacks
-code injection
+(1. Injection Attacks
 - adding your own info into a data stream
+ different injectable data types
+- HTML, SQL, XML, LDAP, and more
 
-enabled from bad programming
-- shouldnt be allowed
+(2. Buffer Overflow
+- A buffer overflow is where an attacker will input more information into a buffer than the buffer can hold. 
 
-many diff injectable data types
-HTML
-SQL
-XML
-LDAP
-etc
-types of application attacks
-buffer overflows
-code injection
-replay attack
-privilege escalation
-cross-site requests
-privilege escalation
-gain higher level access to a system
+(3. Replay 
+- Using information captured and duplicated at a point in time to then “Replay” that to use at a later date, in turn allowing access to the application and the user privileges of the user you have attacked.
 
-high priority to patch
+(4. privilege escalation
+- Privilege escalation is where an attacker exploits a vulnerability to grant them higher, or ideally administrator privilege on a system.
 
-mitigating:
-patching
-updating antivirus/anti-malware
-data execution prevention
-- only data in executable areas can run
-website code
-client and server side code
-
-client side
-- renders pages on screen
-- HTML, JavaScript
-
-server side
-- performs requests from client
-- HTML, PHP
-cross-site request forgery
-1 click attack, session riding
-- XSRF, CSRF (sea surf)
-
-takes adv of the trust that a web app has for the user
+(5. Forgery = CSRF (Sea Surf, XSRF)
+- 1 click attack, session riding 
+- CSRF — Cross Site Request Forgery. CSRF tricks a web browser into executing an unwanted action in an application to which a user is logged in.
 - website trusts your browser
 - requests are made without your consent or knowledge
-directory traversal/path traversal
--Read/write files from a web server that are outside of the website's file directory
+
+(6. Directory Traversal or Path Traversal
+- Directory traversal is where an attacker gains access to directories that they should not be allowed access to, by utilizing a vulnerability within the server, or within an application.
 -Users shouldn't be able to browse the Windows folder
 
-sometimes its software vulnerability
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-sometimes its web app code vulnerability
-cryptographic attacks
-attackers attack the cryptography itself instead of trying to get the encrypted data
-- break the "safe" since they dont have the key
+Cryptographic Attacks
 
-find ways to undo the security
-- the problem is often the implementation
-birthday attack (cryptographic attacks)
-finding a hash collision using brute force
+Cryptographic Attacks terms 
+(1.Downgrade (2.Collision (3.Birthday
 
+(1. Downgrade Attack 
+- A type of attack that forces a system to downgrade its security/encryption. The attacker then exploits the lesser security control.
+
+
+(2. Hash Collision
+- Occurs when the hashing algorithm creates the same hash from different texts
+
+(3. Birthday Attack 
+- finding a hash collision using brute force
 - protect yourself with large has output sizes
-hash collision
-Occurs when the hashing algorithm creates the same hash from different texts
-downgrade attack (cryptographic attacks)
-A type of attack that forces a system to downgrade its security/encryption. The attacker then exploits the lesser security control.
 
-ex: SSL stripping
-SSL stripping (cryptographic attacks)
-combines an on path attack with a downgrade attack
-- hard to implement but big reward if possible
-- attacker must sit in the middle of the convo
-- strips the encryption between the victim and web server
-spraying attack (password attacks)
-attack an account by trying to login with the top 3 or 4 most common passwords
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+Password Attacks 
+
+Password Attacks Terms
+(1.Spraying (2. Brute Force 
+
+(1. Spraying Attack 
+- attack an account by trying to login with the top 3 or 4 most common passwords
 - if it doesnt work move on
-brute force attack (password attacks)
-try every password combination until hash is matched
+
+(2. Brute Force Attack 
+- trying every password combination until hash is matched
 - can take time
 - usually done offline
+- strong hashing algo slows things down
 
-strong hashing algo slows things down
-indicators of compromise (IOC)
-an event that indicates intrusion
-- high confidence
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-indicators
-- unusual amount of network activity
-- change to file hash values
-- irregular international traffic
-- change to DNS data
-etc
-account lockout (IOC)
-exceeded login attempts
-- wasnt you
+Indicators
 
-could be administratively disabled
-- larger concern
+Indicators Terms
+(1.Account Lockout (2.Concurrent Session Usage (3.Blocked Content (4.Impossible Travel (5.Resource Consumption (6.Resource Inaccessibility (7.Out-of-cycle Logging (8.Published/Documented Info (9.Missing Logs
 
-may be part of a larger plan
-- attacker locks acc, calls help desk impersonating you to reset password
-concurrent session usage (IOC)
-multiple acc logins from multiple locations
+(1. Account Lockout
+- exceeded login attempts
+- can be disabled by an administrator
+- attacker may plan to lock your acc and call help desk impersonating you to reset password
+
+(2. Concurrent Session Usage
+- multiple acc logins from multiple locations
 - can be hard to track down
-blocked content (IOC)
-attacker wants to stay as long as possible
-- blocks security patches, updates, removal tools, etc
-impossible travel (IOC)
-impossible travel in authentication logs can be a sign of intrusion
-resource consumption (IOC)
-if resource consumption spikes at unusual times or is higher than usual
 
-firewall logs show the outgoing transfer
+(3. Blocked Content
+- attacker wants to stay as long as possible
+- blocks security patches, updates, removal tools, etc
+
+(4. Impossible Travel
+- impossible travel in authentication logs can be a sign of intrusion
+
+(5. Resource Consumption
+- if resource consumption spikes at unusual times or is higher than usual
+- firewall logs show the outgoing transfer
 - IP addresses, timeframes
 
-often first real notification of issue
-resource inaccessibility (IOC)
-server being down
-- not responding
+(6. Resource Inaccessibility
+- server is down, not responding, or is having a network disruption
 
-network disruption
-- cover for the actual exploit
+(7. Out-of-cycle Logging
+- logs that occur at an unexpected time
 
-server outage
-- result of an exploit gone wrong
+(8. Published/Documented Info
+- This is when documentation has been made publicly avaliable that shouldnt have been.
 
-encrypted data
-out of cycle logging (IOC)
-logs that occur at an unexpected time
-
-check firewall log activity
-missing logs (IOC)
-log info is evidence
-- attackers delete logs to cover tracks
-
-logs may be incriminating
-- missing logs are suspicious
-- logs should be secured and monitored
-published/documented info (IOC)
-company data may be published online
-- can be combined with ransomware
+(9. Missing Logs
+- log info is evidence attackers delete logs to cover tracks
+- logs may be incriminating, missing logs are suspicious, logs should be secured and monitored
